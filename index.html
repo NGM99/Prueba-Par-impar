@@ -1,0 +1,43 @@
+<html>
+<head>
+<title> NUMERO PAR-IMPAR </title>   
+
+<script type="text/javascript">
+
+//Funcion que valida se el numero ingresado es positivo y es par 
+function validar(){
+    var N_num = Number(document.getElementById('numero').value);
+    if(N_num % 2 == 0 && N_num>=0) {
+        par_impar();
+    }
+    else {
+        return  window.alert("INGRESE UN NUMERO POSITIVO PAR");
+    }
+}
+
+//Funcion que calcula si el numero es PAR o IMPAR
+function par_impar() {
+    var numero = Number(document.getElementById('numero').value);
+    N_num = numero*3
+    if(N_num % 2 == 0) {
+        return window.alert("El numero ingresado tiene un resultado PAR");
+    }
+    else {
+        return  window.alert("El numero ingresado tiene un resultado IMPAR");
+    }
+}
+
+</script>     
+
+</head>
+
+<body>
+<!-- Botones  -->
+<div style="height: 150px; display: flex; justify-content: center; align-items: center;">
+    <p>Ingrese un numero positivo  par: </p>
+    <input type="text" id="numero" > 
+    <input type="button" onclick="validar()" value="Calcular">
+</div>
+
+</body>
+</html>
